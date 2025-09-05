@@ -37,7 +37,7 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 20px;
 }
 .navbar__sec2 p:hover{
     cursor: pointer;
@@ -129,7 +129,7 @@ body {
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px; 
-    margin-left: 12%;
+    margin-left: 13%;
     margin-right: 13%;
     flex-direction: row;
     gap: 20px;
@@ -138,6 +138,7 @@ body {
     border-radius: 25px;
     padding: 10px;
     height: 400px;
+    width: 74%;
 
 }
 .container__one__card {
@@ -146,6 +147,7 @@ body {
     cursor: pointer;
     object-fit: cover;
     border-radius: 8px;
+    width: 100%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 .container__one__card img {
@@ -184,7 +186,7 @@ body {
     justify-content: center;
     align-items: stretch;
     margin-top: 30px;
-    /* flex-wrap: wrap; allows wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 .catagory__cards__card {
     display: flex;
@@ -223,13 +225,13 @@ body {
     gap: 20px;
     width: 100%;
     justify-content: center;
-    align-items: stretch;
+    /* align-items: stretch; */
     height: 400px; /* Remove fixed height */
     margin-top: 20px;
 }
 
 .course__card {
-    height: 370px;
+    height: 340px;
     width: 370px;
     background-color: white;
     border-radius: 10px;
@@ -418,6 +420,9 @@ body {
   .catagory__cards__card {
     width: 90%;
     max-width: 320px;
+  }
+  .recommended{
+    display: none;
   }
 }
 
