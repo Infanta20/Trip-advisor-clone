@@ -141,8 +141,8 @@ body {
 
 }
 .container__one__card {
-    /* flex-grow: 1;
-    flex-basis: 20%;*/
+    flex-grow: 1;
+    flex-basis: 20%;
     cursor: pointer;
     object-fit: cover;
     border-radius: 8px;
@@ -341,20 +341,108 @@ body {
     color: #34e0a1;
 }
 
-/* Responsive */
-@media screen and (max-width:800px){
+/* ---------------------------
+   MEDIA QUERIES
+---------------------------- */
+
+/* Tablets & small desktops (≤ 800px) */
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px; /* base font shrinks */
+  }
+
+  .container {
+    flex-direction: column; /* stack image & text */
+    height: auto;           /* let height grow naturally */
+    padding: 20px;
+  }
+
+  .container__one__card img {
+    height: 250px;
+    width: 100%;
+  }
+
+  .container__one__card__text {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .container__one__card__text__heading {
+    font-size: 2rem; /* relative size */
+  }
+}
+
+/* Phones (≤ 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px; /* even smaller text */
+  }
+
+  .navbar__sec1__logo,
+  .navbar__sec3 {
+    display: none; /* hide logo & sign-in to save space */
+  }
+
+  .tittle__catagories {
+    flex-wrap: wrap; /* allow wrapping */
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .tittle__catagories p {
+    flex: 1 1 45%; /* 2 items per row */
+    margin: 5px;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .container__one__card img {
+    height: 200px;
+  }
+
+  .container__one__card__text__heading {
+    font-size: 1.6rem;
+  }
+
+  .recomended__container,
+  .catagory__cards {
+    flex-wrap: wrap; /* cards stack on small screens */
+    justify-content: center;
+  }
+
+  .course__card,
+  .catagory__cards__card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+
+
+/* @media screen and (max-width:800px){
     body{
         font-size: 10px;
     }
      .course__card, .catagory__cards__card {
         flex-basis: 40%;
     }
-    .container{
-      display: none;
+    .container .container__one__card img {
+        height: 250px;
+        width: 60%;
     }
-
+    .container__one__card__text__heading {
+    font-size: 3rem; 
 }
-@media screen and (max-width:600px){
+} */
+
+
+
+
+/* @media screen and (max-width:600px){
     .course__card, .catagory__cards__card {
         flex-basis: 40%;
     }
@@ -365,9 +453,6 @@ body {
         margin-left: 5%;
         margin-right: 5%;
     }
-    /* .navbar__sec2, .navbar__sec3{
-        display: none;
-    } */
     .navbar__sec1{
         flex-direction: column;
         align-items: center;
@@ -383,11 +468,7 @@ body {
       display: none;
     }
     
-}
-
-
-
-
+} */
 @media (max-width: 800px) {
     .footer__main {
         flex-direction: column;
@@ -402,3 +483,48 @@ body {
         max-width: 100%;
     }
 }
+
+/* @media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0 4%;
+        min-height: 60px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .navbar__sec2, .navbar__sec3 {
+        padding: 10px;
+        gap: 10px;
+        font-size: 0.95rem;
+    }
+    .catagory,
+    .recommended {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .catagory__cards,
+    .recomended__container {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+    .catagory__cards__card,
+    .course__card {
+        width: 90vw;
+        max-width: 320px;
+        min-width: 180px;
+        margin: 0 auto;
+    }
+    .footer__main {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .footer__column {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .footer__bottom {
+        padding: 20px 5px 10px 5px;
+    }
+} */
